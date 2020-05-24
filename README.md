@@ -13,6 +13,17 @@ Este endpoint sirve como Backend REST que otorga informacion metadata de colores
 * `GET /colores?page=X`: Lista todos los colores y su metadata, mostrando la pagina X
 * `GET /colores?xml=1`: Lista todos los colores y su metadata, en formato XML.
 
+* `POST /colores/create`: Crea un color nuevo, el cual requiere del siguiente body de ejemplo:
+
+```
+{
+	"name":"Cornflower Blue",
+	"year":"2020",
+	"color":"#6195ED",
+	"pantone_value":"15-4020"
+}
+```
+
 Se puede combinar los flags de page con xml, ej:
 * `GET /colores?page=1&xml=1`: Lista todos los colores y su metadata, en formato XML.
 

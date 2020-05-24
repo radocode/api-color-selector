@@ -34,3 +34,23 @@ Si solo se desea probar la api, bastaria con:
 npm install
 npm start
 ```
+## Instrucciones de Docker
+
+Es posible ejecutar esta API dentro de un contenedor Docker, para tal efecto, bastaria con ejecutar:
+
+```
+docker build -t [nombre_de_usuario]/colores-api .  
+docker run -p 49160:3000 -d [nombre_de_usuario]/colores-api
+```
+
+Donde [nombre_de_usuario] es el username de la shell en el que ejecutara el comando.
+
+## Instrucciones de Ejecucion
+
+Luego, bastaria con apuntar con Postman a:
+
+```
+http://localhost:3000/colores 
+```
+
+para obtener todos los colores.

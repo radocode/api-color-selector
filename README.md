@@ -1,18 +1,34 @@
-# Node.js REST API Template
-[![Build Status](https://travis-ci.org/jaredpetersen/nodejs-api-template.svg?branch=master)](https://travis-ci.org/jaredpetersen/nodejs-api-template)
+# Node.js REST Colores-API
 
-Simple template for creating a Node.js REST API
+Este endpoint sirve como Backend REST que otorga informacion metadata de colores desde un CSV. Permite paginacion y salida Json y XML.
 
-## Endpoints
-* `GET /health`: Gets API health status
-* `GET /tasks`: Lists all tasks
-* `POST /tasks`: Intentionally buggy route, returns an error
-* `null`: Default route, returns 404 as the endpoint requested does not exist
+## Documentacion Endpoints
+* `GET /health`: Obtiene el status del API
+* `GET /colores`: Lista todos los colores y su metadata
+* `GET /colores/id`: Lista un color por su identificador
+* `GET /colores/id?xml=1`: Lista un color por su identificador, en formato XML
+* `GET /colores?xml=1`: Lista todos los colores y su metadata, en formato XML
+* `GET /colores?page=X`: Lista todos los colores y su metadata, mostrando la pagina X
+* `GET /colores?xml=1`: Lista todos los colores y su metadata, en formato XML.
 
-## Usage
+Se puede combinar los flags de page con xml, ej:
+* `GET /colores?page=1&xml=1`: Lista todos los colores y su metadata, en formato XML.
+
+## Instrucciones de instalacion
+
+Ejecutar los siguientes comandos. Estos aseguraran de que se instale las dependencias
+y ademas ejecutara las pruebas unitarias.
+
 ```
 npm install
 npm test
 npm run test-coverage
+npm start
+```
+
+Si solo se desea probar la api, bastaria con:
+
+```
+npm install
 npm start
 ```

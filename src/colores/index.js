@@ -36,7 +36,7 @@ function getColorsDb() {
 exports.findAll = (req, res, next) => {
   console.log('findAll req query:', req.query);
   genericRes.data = colors;
-  genericRes.actualPage = req.query.page && req.query.page > 0 ? req.query.page : null;
+  genericRes.actualPage = req.query.page && req.query.page > 0 ? req.query.page : 1;
   if (genericRes.data && genericRes.data.length > 0) {
     genericRes.totalElements = genericRes.data.length;
     // filtrar si hay paginacion
@@ -59,6 +59,7 @@ exports.findAll = (req, res, next) => {
   } else {
     genericRes.error = "No data";
     if (req.query.xml) {
+      res = res.status(400);
       sendXml(res);
     } else {
       res.status(400).json(genericRes);
@@ -79,6 +80,7 @@ exports.findById = (req, res, next) => {
   } else {
     genericRes.error = "No data";
     if (req.query.xml) {
+      res = res.status(400);
       sendXml(res);
     } else {
       res.status(400).json(genericRes);

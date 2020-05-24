@@ -36,7 +36,7 @@ function getColorsDb() {
 exports.findAll = (req, res, next) => {
   console.log('findAll req query:', req.query);
   genericRes.data = colors;
-  genericRes.actualPage = req.query.page ? req.query.page : null;
+  genericRes.actualPage = req.query.page && req.query.page > 0 ? req.query.page : null;
   if (genericRes.data && genericRes.data.length > 0) {
     genericRes.totalElements = genericRes.data.length;
     // filtrar si hay paginacion

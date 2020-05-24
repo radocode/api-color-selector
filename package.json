@@ -1,5 +1,5 @@
 {
-  "name": "api-template",
+  "name": "colores-api",
   "main": "server.js",
   "version": "1.0.0",
   "author": "Jared Petersen <jaredtoddpetersen@gmail.com> (https://github.com/jaredpetersen)",

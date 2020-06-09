@@ -1,6 +1,6 @@
 # Node.js REST Colores-API
 
-[![Build Status](https://travis-ci.org/radocode/api-color-selector.svg?branch=master)](https://travis-ci.org/radocode/api-color-selector)
+![Node.js CI](https://github.com/radocode/api-color-selector/workflows/Node.js%20CI/badge.svg)
 
 Este endpoint sirve como Backend REST que otorga informacion metadata de colores desde un CSV. Permite paginacion y salida Json y XML.
 
